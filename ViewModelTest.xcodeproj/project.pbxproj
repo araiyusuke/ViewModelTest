@@ -14,6 +14,7 @@
 		F1659BB228B26218003638A8 /* ViewModelTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1659BB128B26218003638A8 /* ViewModelTestTests.swift */; };
 		F1659BBC28B26218003638A8 /* ViewModelTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1659BBB28B26218003638A8 /* ViewModelTestUITests.swift */; };
 		F1659BBE28B26218003638A8 /* ViewModelTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1659BBD28B26218003638A8 /* ViewModelTestUITestsLaunchTests.swift */; };
+		F1659C1128B26F57003638A8 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = F1659C1028B26F57003638A8 /* SnapshotTesting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1659C1128B26F57003638A8 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,7 @@
 				F1659BB028B26218003638A8 /* ViewModelTestTests */,
 				F1659BBA28B26218003638A8 /* ViewModelTestUITests */,
 				F1659B9E28B26216003638A8 /* Products */,
+				F1659C0C28B26F27003638A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +130,13 @@
 			path = ViewModelTestUITests;
 			sourceTree = "<group>";
 		};
+		F1659C0C28B26F27003638A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +153,8 @@
 			dependencies = (
 			);
 			name = ViewModelTest;
+			packageProductDependencies = (
+			);
 			productName = ViewModelTest;
 			productReference = F1659B9D28B26216003638A8 /* ViewModelTest.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +173,9 @@
 				F1659BAF28B26218003638A8 /* PBXTargetDependency */,
 			);
 			name = ViewModelTestTests;
+			packageProductDependencies = (
+				F1659C1028B26F57003638A8 /* SnapshotTesting */,
+			);
 			productName = ViewModelTestTests;
 			productReference = F1659BAD28B26218003638A8 /* ViewModelTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -215,6 +230,9 @@
 				Base,
 			);
 			mainGroup = F1659B9428B26216003638A8;
+			packageReferences = (
+				F1659C0D28B26F44003638A8 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = F1659B9E28B26216003638A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -345,7 +363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +417,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -583,6 +601,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1659C0D28B26F44003638A8 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1659C1028B26F57003638A8 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1659C0D28B26F44003638A8 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1659B9528B26216003638A8 /* Project object */;
 }
